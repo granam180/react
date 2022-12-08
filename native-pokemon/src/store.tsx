@@ -70,7 +70,9 @@ function usePokemonSource(): {
     () =>
       pokemon
         .filter((p) => p.name.toLowerCase().includes(search.toLowerCase()))
-        .slice(0, 20),
+        //
+        // show me Top 18 (fits screen width of TW grid) only out of 200+ Pokemons TOO MUCH!
+        .slice(0, 18),
     [pokemon, search]
   );
 
